@@ -1,0 +1,36 @@
+{
+  "alias": "multilingual_minilm",
+  "model_name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "fingerprint": "0c2cca8cfea6c8192bc487fb35f332c45bf6f6a6bca51efb2a0ba7af33d01c9a",
+  "created_at_utc": "2026-07-14T22:26:30.504015+00:00",
+  "cache_status": "loaded",
+  "model_load_seconds": 8.55,
+  "encode_seconds": 0.001,
+  "embedding_shape": [
+    316,
+    384
+  ],
+  "embedding_dtype": "float32",
+  "embedding_file": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\retrieval\\embeddings\\multilingual_minilm_document_embeddings.npy",
+  "embedding_file_size_mb": 0.463,
+  "validation": {
+    "rows": 316,
+    "dimension": 384,
+    "invalid_values": 0,
+    "zero_vectors": 0,
+    "mean_norm": 1.0,
+    "min_norm": 0.9999998807907104,
+    "max_norm": 1.0000001192092896
+  },
+  "device": "cpu",
+  "config": {
+    "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "alias": "multilingual_minilm",
+    "enabled": true,
+    "query_prefix": "",
+    "passage_prefix": "",
+    "trust_remote_code": false,
+    "batch_size": 32,
+    "max_seq_length": 512
+  }
+}

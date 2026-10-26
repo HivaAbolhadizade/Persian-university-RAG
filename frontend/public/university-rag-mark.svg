@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="University RAG logo">
+<rect width="128" height="128" rx="26" fill="#162d4e"/>
+<path d="M26 36L64 22l38 14-38 14z" fill="#a7d8dc"/>
+<path d="M26 49l38 14 38-14M26 62l38 14 38-14" fill="none" stroke="#a7d8dc" stroke-width="8" stroke-linejoin="round"/>
+<path d="M39 92h50" stroke="#f3f5f8" stroke-width="9" stroke-linecap="round"/>
+</svg>

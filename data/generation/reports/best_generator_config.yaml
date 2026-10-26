@@ -1,0 +1,38 @@
+benchmark_type: generation_silver
+selection_status: mock_smoke_test_only
+production_ready: false
+requires_manual_review: true
+selection_notes: Only the mock extractive provider was eligible. The active generation
+  benchmark is silver and has no complete manual reference answers. The selected retriever
+  is provisional rather than a final gold-benchmark selection.
+reference_answer_coverage: 0.0
+experiment_label: mock_extractive|concise_grounded_json|k=3
+provider_alias: mock_extractive
+provider_name: mock
+model: extractive-baseline-v1
+prompt_variant: concise_grounded_json
+context_k: 3
+eligible_for_selection: true
+generation_success_rate: 1.0
+nonempty_answer_rate: 1.0
+retriever:
+  benchmark_type: silver_auto
+  selection_status: provisional_silver
+  final_scientific_selection: false
+  benchmark_label: bm25
+  method: bm25
+  dense_alias: multilingual_e5_base
+  embedding_model_name: null
+  reranker_enabled: false
+  reranker_model_name: null
+  final_k: 5
+  candidate_k: 30
+  rrf_k: 60
+  bm25_weight: 1.0
+  dense_weight: 1.0
+  deduplicate: true
+  use_mmr: true
+  mmr_lambda: 0.75
+development_composite_score: 0.8535442041097524
+no_answer_message: پاسخ این سؤال در اسناد موجود یافت نشد.
+retrieval_score_threshold: 6.220506191253662

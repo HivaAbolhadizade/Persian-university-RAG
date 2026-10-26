@@ -1,0 +1,17 @@
+benchmark_type: silver_auto
+selection_status: provisional_silver
+final_scientific_selection: false
+benchmark_label: bm25
+method: bm25
+dense_alias: multilingual_e5_base
+embedding_model_name: null
+reranker_enabled: false
+reranker_model_name: null
+final_k: 5
+candidate_k: 30
+rrf_k: 60
+bm25_weight: 1.0
+dense_weight: 1.0
+deduplicate: true
+use_mmr: true
+mmr_lambda: 0.75

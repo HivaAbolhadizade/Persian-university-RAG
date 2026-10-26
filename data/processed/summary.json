@@ -1,0 +1,15 @@
+{
+  "run_id": "20260714_232636",
+  "status": "completed",
+  "documents": 15,
+  "pages": 277,
+  "chunks": 316,
+  "documents_ready_for_retrieval": 14,
+  "documents_needing_review": 1,
+  "invalid_documents": 0,
+  "ocr_used_pages": 146,
+  "errors_count": 0,
+  "warnings_count": 0,
+  "total_runtime_seconds": 1816.327,
+  "next_notebook_input": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\processed\\chunks.parquet"
+}

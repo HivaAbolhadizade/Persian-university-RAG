@@ -1,0 +1,65 @@
+{
+  "generated_at_utc": "2026-07-14T20:24:07.161116+00:00",
+  "dataset": {
+    "total_pdf_files_discovered": 18,
+    "unique_documents_processed": 15,
+    "duplicate_files": 3,
+    "total_pages": 277,
+    "total_chunks": 316
+  },
+  "initial_page_analysis": {
+    "text_pages": 130,
+    "scanned_pages": 146,
+    "suspicious_pages": 1,
+    "corrupt_pages": 0
+  },
+  "extraction": {
+    "direct_selected_pages": 131,
+    "ocr_attempted_pages": 147,
+    "ocr_used_pages": 146,
+    "failed_pages": 0,
+    "documents_needing_ocr": 12,
+    "documents_needing_ocr_percentage": 80.0,
+    "ocr_pipeline_available": true
+  },
+  "validation": {
+    "ready_pages": 275,
+    "needs_review_pages": 1,
+    "invalid_pages": 1,
+    "empty_normalized_pages": 1,
+    "ready_documents": 14,
+    "needs_review_documents": 1,
+    "invalid_documents": 0,
+    "documents_ready_for_retrieval": 14
+  },
+  "statistics": {
+    "average_tokens_per_page": 396.48,
+    "average_tokens_per_document": 7321.6,
+    "average_tokens_per_chunk": 405.38,
+    "average_chunks_per_document": 21.07,
+    "largest_document": {
+      "document_id": "doc_cde80d5de36969b4",
+      "title": "مجموعه مقررات آموزشی 1402",
+      "tokens": 51820,
+      "pages": 127
+    },
+    "smallest_document": {
+      "document_id": "doc_6def6b6e442a995c",
+      "title": "اطالعیه نیمسال پایان امتحانات در دانشجویان شرکت راهنمای",
+      "tokens": 461,
+      "pages": 1
+    }
+  },
+  "chunk_validation": {
+    "valid": true,
+    "issues": [],
+    "duplicate_chunk_ids": 0,
+    "empty_chunks": 0,
+    "chunks_over_max_tokens": 0,
+    "short_chunks": 10,
+    "short_structural_chunks": 50,
+    "standard_chunks": 256
+  },
+  "errors_count": 0,
+  "warnings_count": 0
+}

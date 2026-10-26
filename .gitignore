@@ -1,0 +1,48 @@
+# Local API secrets / settings
+.env
+.env.*
+!.env.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+*.pem
+*.key
+
+# Python / notebooks
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.jupyter/
+
+# Node / frontend
+frontend/node_modules/
+frontend/dist/
+*.tsbuildinfo
+
+# Raw third-party PDFs are not redistributed (see docs/SECURITY_AND_DATA.md)
+data/raw/**
+!data/raw/.gitkeep
+
+# Mutable runtime settings and caches should not be committed
+data/backend_runtime/
+data/generation/cache/
+logs/
+.cache/
+
+# Sensitive/unreviewed local experiment outputs; curated reports are tracked
+reports/current_policy_test/
+reports/gemini_key_test/
+reports/source_authority_test/
+reports/rag_evaluation/raw_results.jsonl
+reports/rag_evaluation_gemini_final/raw_results.jsonl
+
+# Editor & OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

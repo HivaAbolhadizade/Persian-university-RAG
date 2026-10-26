@@ -1,0 +1,303 @@
+{
+  "run_id": "20260715_022238",
+  "run_started_utc": "2026-07-14T22:52:38.686205+00:00",
+  "python_version": "3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]",
+  "python_executable": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "machine": "AMD64",
+  "device": "cpu",
+  "gpu_name": null,
+  "physical_memory_gb": 15.7,
+  "package_versions": {
+    "pandas": "3.0.3",
+    "numpy": "1.26.4",
+    "pyarrow": "25.0.0",
+    "PyYAML": "6.0.3",
+    "python-dotenv": "1.2.2",
+    "hazm": "0.9.3",
+    "rank-bm25": "0.2.2",
+    "sentence-transformers": "5.6.0",
+    "transformers": "5.13.1",
+    "torch": "2.13.0",
+    "faiss-cpu": "1.14.3",
+    "tenacity": "9.1.4",
+    "matplotlib": "3.11.0",
+    "psutil": "7.2.2",
+    "openai": "2.45.0",
+    "anthropic": "0.116.0",
+    "google-genai": "2.11.0",
+    "accelerate": "1.14.0"
+  },
+  "ready_provider_aliases": [
+    "mock_extractive"
+  ],
+  "run_finished_utc": "2026-07-14T22:55:21.857274+00:00",
+  "total_runtime_seconds": 163.155,
+  "stage_timings_seconds": {
+    "load_previous_pipeline_outputs": 0.084,
+    "generation_evaluation_experiments": 94.268,
+    "generation_robustness_evaluation": 54.497,
+    "export_generation_results": 0.081
+  },
+  "config": {
+    "project": {
+      "name": "University_RAG",
+      "seed": 42,
+      "language": "fa"
+    },
+    "paths": {
+      "chunks": "data/processed/chunks.parquet",
+      "retrieval_config": "retrieval_config.yaml",
+      "index_manifest": "data/retrieval/indexes/index_manifest.json",
+      "best_retriever": "data/retrieval/reports/best_retriever_config.yaml",
+      "thresholds": "data/retrieval/reports/threshold_calibration.csv",
+      "retrieval_gold": "data/retrieval/evaluation/retrieval_questions_gold.csv",
+      "retrieval_silver": "data/retrieval/evaluation/retrieval_questions_silver.csv",
+      "generation_root": "data/generation",
+      "evaluation": "data/generation/evaluation",
+      "cache": "data/generation/cache",
+      "results": "data/generation/results",
+      "reports": "data/generation/reports",
+      "figures": "data/generation/reports/figures",
+      "logs": "data/generation/logs"
+    },
+    "runtime_retrieval": {
+      "top_k": 5,
+      "candidate_k": 20,
+      "use_reranker": true,
+      "use_threshold": true,
+      "threshold_fallback": null,
+      "expand_neighbor_context": false,
+      "neighbor_window": 1,
+      "article_priority": true,
+      "deduplicate_results": true,
+      "deduplication_threshold": 0.94,
+      "maximum_chunks_per_document": 3
+    },
+    "context": {
+      "maximum_context_tokens": 6000,
+      "maximum_source_tokens": 1200,
+      "minimum_source_tokens": 40,
+      "maximum_sources": 6,
+      "include_title": true,
+      "include_page": true,
+      "include_article": true,
+      "include_category": true,
+      "deduplicate_sources": true,
+      "deduplication_threshold": 0.94
+    },
+    "generation": {
+      "default_provider": "mock_extractive",
+      "default_prompt_variant": "strict_grounded_json",
+      "language": "Persian",
+      "maximum_output_tokens": 900,
+      "temperature": 0.0,
+      "retry_attempts": 3,
+      "cache_enabled": true,
+      "no_answer_message": "پاسخ این سؤال در اسناد موجود یافت نشد."
+    },
+    "providers": [
+      {
+        "alias": "mock_extractive",
+        "provider": "mock",
+        "model": "extractive-baseline-v1",
+        "enabled": true,
+        "api_key_env": "",
+        "input_price_per_million": null,
+        "output_price_per_million": null
+      },
+      {
+        "alias": "openai_api",
+        "provider": "openai",
+        "model": "replace-with-current-openai-model",
+        "enabled": false,
+        "api_key_env": "OPENAI_API_KEY",
+        "reasoning_effort": "low",
+        "input_price_per_million": null,
+        "output_price_per_million": null
+      },
+      {
+        "alias": "anthropic_api",
+        "provider": "anthropic",
+        "model": "replace-with-current-anthropic-model",
+        "enabled": false,
+        "api_key_env": "ANTHROPIC_API_KEY",
+        "input_price_per_million": null,
+        "output_price_per_million": null
+      },
+      {
+        "alias": "gemini_api",
+        "provider": "gemini",
+        "model": "replace-with-current-gemini-model",
+        "enabled": false,
+        "api_key_env": "GEMINI_API_KEY",
+        "input_price_per_million": null,
+        "output_price_per_million": null
+      },
+      {
+        "alias": "openai_compatible",
+        "provider": "openai_compatible",
+        "model": "replace-with-provider-model",
+        "enabled": false,
+        "api_key_env": "OPENAI_COMPATIBLE_API_KEY",
+        "base_url_env": "OPENAI_COMPATIBLE_BASE_URL",
+        "input_price_per_million": null,
+        "output_price_per_million": null
+      },
+      {
+        "alias": "local_model",
+        "provider": "local_transformers",
+        "model": "Qwen/Qwen2.5-3B-Instruct",
+        "enabled": false,
+        "api_key_env": "",
+        "device_map": "auto",
+        "input_price_per_million": 0.0,
+        "output_price_per_million": 0.0
+      }
+    ],
+    "prompts": {
+      "enabled_variants": [
+        "strict_grounded_json",
+        "concise_grounded_json",
+        "baseline_context_json"
+      ]
+    },
+    "evaluation": {
+      "prefer_gold_file": true,
+      "gold_filename": "generation_questions_gold.csv",
+      "silver_filename": "generation_questions_silver.csv",
+      "maximum_queries": 50,
+      "answerable_sample_size": 30,
+      "unanswerable_sample_size": 10,
+      "balanced_sampling": true,
+      "run_all_enabled_providers": true,
+      "context_k_values": [
+        3,
+        5
+      ],
+      "repeat_runs": 1,
+      "semantic_model_alias": "",
+      "lexical_support_threshold": 0.2,
+      "citation_sentence_threshold": 0.75,
+      "human_evaluation_sample_size": 30,
+      "minimum_generation_success_rate_for_selection": 0.95,
+      "minimum_nonempty_answer_rate_for_selection": 0.95,
+      "allow_mock_for_final_selection": false,
+      "require_gold_for_final_selection": true
+    },
+    "nli_faithfulness": {
+      "enabled": false,
+      "model_name": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+      "batch_size": 8
+    },
+    "llm_judge": {
+      "enabled": false,
+      "provider_alias": "",
+      "maximum_queries": 30
+    },
+    "robustness": {
+      "enabled": true,
+      "maximum_queries": 20
+    }
+  },
+  "input_validation": {
+    "valid": true,
+    "chunks": 316,
+    "documents": 15,
+    "selected_method": "bm25",
+    "selected_dense_alias": "multilingual_e5_base",
+    "retriever_selection_status": "provisional_silver",
+    "manifest_match": true
+  },
+  "provider_initialization": [
+    {
+      "alias": "mock_extractive",
+      "provider": "mock",
+      "model": "extractive-baseline-v1",
+      "status": "ready",
+      "load_seconds": 0.0,
+      "error": null
+    }
+  ],
+  "best_retriever": {
+    "benchmark_type": "silver_auto",
+    "selection_status": "provisional_silver",
+    "final_scientific_selection": false,
+    "benchmark_label": "bm25",
+    "method": "bm25",
+    "dense_alias": "multilingual_e5_base",
+    "embedding_model_name": null,
+    "reranker_enabled": false,
+    "reranker_model_name": null,
+    "final_k": 5,
+    "candidate_k": 30,
+    "rrf_k": 60,
+    "bm25_weight": 1.0,
+    "dense_weight": 1.0,
+    "deduplicate": true,
+    "use_mmr": true,
+    "mmr_lambda": 0.75
+  },
+  "best_generator": {
+    "benchmark_type": "generation_silver",
+    "selection_status": "mock_smoke_test_only",
+    "production_ready": false,
+    "requires_manual_review": true,
+    "selection_notes": "Only the mock extractive provider was eligible. The active generation benchmark is silver and has no complete manual reference answers. The selected retriever is provisional rather than a final gold-benchmark selection.",
+    "reference_answer_coverage": 0.0,
+    "experiment_label": "mock_extractive|concise_grounded_json|k=3",
+    "provider_alias": "mock_extractive",
+    "provider_name": "mock",
+    "model": "extractive-baseline-v1",
+    "prompt_variant": "concise_grounded_json",
+    "context_k": 3,
+    "eligible_for_selection": true,
+    "generation_success_rate": 1.0,
+    "nonempty_answer_rate": 1.0,
+    "retriever": {
+      "benchmark_type": "silver_auto",
+      "selection_status": "provisional_silver",
+      "final_scientific_selection": false,
+      "benchmark_label": "bm25",
+      "method": "bm25",
+      "dense_alias": "multilingual_e5_base",
+      "embedding_model_name": null,
+      "reranker_enabled": false,
+      "reranker_model_name": null,
+      "final_k": 5,
+      "candidate_k": 30,
+      "rrf_k": 60,
+      "bm25_weight": 1.0,
+      "dense_weight": 1.0,
+      "deduplicate": true,
+      "use_mmr": true,
+      "mmr_lambda": 0.75
+    },
+    "development_composite_score": 0.8535442041097524,
+    "no_answer_message": "پاسخ این سؤال در اسناد موجود یافت نشد.",
+    "retrieval_score_threshold": 6.220506191253662
+  },
+  "generator_selection_status": "mock_smoke_test_only",
+  "production_ready": false,
+  "active_generation_benchmark": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\generation\\evaluation\\generation_questions_silver.csv",
+  "output_paths": {
+    "generation_results_parquet": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\generation\\results\\generation_results.parquet",
+    "generation_sources_parquet": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\generation\\results\\generation_sources.parquet",
+    "experiment_comparison_csv": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\generation\\reports\\experiment_comparison.csv",
+    "provider_comparison_csv": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\generation\\reports\\provider_comparison.csv",
+    "prompt_comparison_csv": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\generation\\reports\\prompt_comparison.csv",
+    "nli_results_csv": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\generation\\reports\\nli_faithfulness.csv",
+    "llm_judge_csv": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\generation\\reports\\llm_judge_results.csv",
+    "robustness_results_csv": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\generation\\reports\\robustness_results.csv",
+    "robustness_summary_csv": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\generation\\reports\\robustness_summary.csv",
+    "error_analysis_csv": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\generation\\reports\\generation_error_analysis.csv",
+    "human_evaluation_csv": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\generation\\evaluation\\human_evaluation_sheet.csv",
+    "best_generator_yaml": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\generation\\reports\\best_generator_config.yaml",
+    "metrics_json": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\generation\\reports\\generation_metrics.json",
+    "generation_summary_json": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\generation\\reports\\generation_summary.json",
+    "execution_report_json": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\generation\\reports\\execution_report.json"
+  },
+  "log_path": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\generation\\logs\\generation_pipeline_20260715_022238.log",
+  "errors": [],
+  "warnings": []
+}

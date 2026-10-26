@@ -1,0 +1,36 @@
+{
+  "alias": "multilingual_e5_base",
+  "model_name": "intfloat/multilingual-e5-base",
+  "fingerprint": "4846233b48db67707483ba49b5ed93fb40a81e866f774a72635a9cc2f290b5e4",
+  "created_at_utc": "2026-07-14T22:26:38.333275+00:00",
+  "cache_status": "loaded",
+  "model_load_seconds": 7.815,
+  "encode_seconds": 0.002,
+  "embedding_shape": [
+    316,
+    768
+  ],
+  "embedding_dtype": "float32",
+  "embedding_file": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\retrieval\\embeddings\\multilingual_e5_base_document_embeddings.npy",
+  "embedding_file_size_mb": 0.9259,
+  "validation": {
+    "rows": 316,
+    "dimension": 768,
+    "invalid_values": 0,
+    "zero_vectors": 0,
+    "mean_norm": 1.0,
+    "min_norm": 0.9999998807907104,
+    "max_norm": 1.0000001192092896
+  },
+  "device": "cpu",
+  "config": {
+    "name": "intfloat/multilingual-e5-base",
+    "alias": "multilingual_e5_base",
+    "enabled": true,
+    "query_prefix": "query: ",
+    "passage_prefix": "passage: ",
+    "trust_remote_code": false,
+    "batch_size": 16,
+    "max_seq_length": 512
+  }
+}

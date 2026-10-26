@@ -1,0 +1,51 @@
+# Unified Python dependencies for University_RAG
+# Install with: .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+
+# Core data and notebooks
+jupyter
+pymupdf
+pandas
+numpy
+pyarrow
+matplotlib
+tqdm
+psutil
+joblib
+scipy
+scikit-learn
+
+# Persian text and OCR
+hazm
+pytesseract
+pillow
+opencv-python
+
+# Retrieval and machine learning
+rank-bm25
+sentence-transformers
+transformers
+sentencepiece
+torch
+faiss-cpu
+chromadb
+accelerate
+
+# Backend and runtime
+fastapi
+uvicorn[standard]
+pydantic-settings
+python-dotenv
+python-multipart
+PyYAML
+tenacity
+httpx
+requests
+keyring
+
+# LLM providers
+openai
+anthropic
+google-genai
+
+# Development and tests
+pytest

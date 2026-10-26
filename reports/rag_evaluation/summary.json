@@ -1,0 +1,225 @@
+{
+  "generated_at": "2026-07-18T17:29:19.488586+00:00",
+  "automatic_scoring_note": "heuristic_accuracy is based on normalized exact/containment/token overlap plus numeric and yes/no consistency. Manually review borderline cases before reporting final scientific accuracy.",
+  "modes": {
+    "best": {
+      "overall": {
+        "total": 100,
+        "heuristic_correct_count": 19,
+        "heuristic_accuracy": 0.19,
+        "exact_match_rate": 0.0,
+        "source_hit_count": 77,
+        "source_recall_at_k": 0.77,
+        "mean_reciprocal_rank": 0.5395,
+        "no_answer_count": 7,
+        "no_answer_rate": 0.07,
+        "citation_rate": 0.93,
+        "valid_citation_rate": 0.93,
+        "mean_token_f1": 0.0668,
+        "mean_latency_seconds": 4.9919,
+        "p95_latency_seconds": 5.5005
+      },
+      "by_difficulty": {
+        "easy": {
+          "total": 36,
+          "heuristic_correct_count": 12,
+          "heuristic_accuracy": 0.3333,
+          "exact_match_rate": 0.0,
+          "source_hit_count": 25,
+          "source_recall_at_k": 0.6944,
+          "mean_reciprocal_rank": 0.5796,
+          "no_answer_count": 3,
+          "no_answer_rate": 0.0833,
+          "citation_rate": 0.9167,
+          "valid_citation_rate": 0.9167,
+          "mean_token_f1": 0.0341,
+          "mean_latency_seconds": 4.9177,
+          "p95_latency_seconds": 5.5165
+        },
+        "hard": {
+          "total": 22,
+          "heuristic_correct_count": 0,
+          "heuristic_accuracy": 0.0,
+          "exact_match_rate": 0.0,
+          "source_hit_count": 17,
+          "source_recall_at_k": 0.7727,
+          "mean_reciprocal_rank": 0.475,
+          "no_answer_count": 0,
+          "no_answer_rate": 0.0,
+          "citation_rate": 1.0,
+          "valid_citation_rate": 1.0,
+          "mean_token_f1": 0.0836,
+          "mean_latency_seconds": 5.2807,
+          "p95_latency_seconds": 5.4875
+        },
+        "medium": {
+          "total": 42,
+          "heuristic_correct_count": 7,
+          "heuristic_accuracy": 0.1667,
+          "exact_match_rate": 0.0,
+          "source_hit_count": 35,
+          "source_recall_at_k": 0.8333,
+          "mean_reciprocal_rank": 0.5389,
+          "no_answer_count": 4,
+          "no_answer_rate": 0.0952,
+          "citation_rate": 0.9048,
+          "valid_citation_rate": 0.9048,
+          "mean_token_f1": 0.086,
+          "mean_latency_seconds": 4.9043,
+          "p95_latency_seconds": 5.4701
+        }
+      },
+      "by_question_type": {
+        "factoid": {
+          "total": 91,
+          "heuristic_correct_count": 19,
+          "heuristic_accuracy": 0.2088,
+          "exact_match_rate": 0.0,
+          "source_hit_count": 70,
+          "source_recall_at_k": 0.7692,
+          "mean_reciprocal_rank": 0.5494,
+          "no_answer_count": 7,
+          "no_answer_rate": 0.0769,
+          "citation_rate": 0.9231,
+          "valid_citation_rate": 0.9231,
+          "mean_token_f1": 0.0646,
+          "mean_latency_seconds": 4.9619,
+          "p95_latency_seconds": 5.5055
+        },
+        "reasoning": {
+          "total": 9,
+          "heuristic_correct_count": 0,
+          "heuristic_accuracy": 0.0,
+          "exact_match_rate": 0.0,
+          "source_hit_count": 7,
+          "source_recall_at_k": 0.7778,
+          "mean_reciprocal_rank": 0.4389,
+          "no_answer_count": 0,
+          "no_answer_rate": 0.0,
+          "citation_rate": 1.0,
+          "valid_citation_rate": 1.0,
+          "mean_token_f1": 0.0884,
+          "mean_latency_seconds": 5.296,
+          "p95_latency_seconds": 5.47
+        }
+      }
+    },
+    "hybrid": {
+      "overall": {
+        "total": 100,
+        "heuristic_correct_count": 18,
+        "heuristic_accuracy": 0.18,
+        "exact_match_rate": 0.0,
+        "source_hit_count": 73,
+        "source_recall_at_k": 0.73,
+        "mean_reciprocal_rank": 0.4923,
+        "no_answer_count": 2,
+        "no_answer_rate": 0.02,
+        "citation_rate": 0.98,
+        "valid_citation_rate": 0.98,
+        "mean_token_f1": 0.0749,
+        "mean_latency_seconds": 9.2913,
+        "p95_latency_seconds": 10.0006
+      },
+      "by_difficulty": {
+        "easy": {
+          "total": 36,
+          "heuristic_correct_count": 10,
+          "heuristic_accuracy": 0.2778,
+          "exact_match_rate": 0.0,
+          "source_hit_count": 27,
+          "source_recall_at_k": 0.75,
+          "mean_reciprocal_rank": 0.6074,
+          "no_answer_count": 0,
+          "no_answer_rate": 0.0,
+          "citation_rate": 1.0,
+          "valid_citation_rate": 1.0,
+          "mean_token_f1": 0.0423,
+          "mean_latency_seconds": 9.1655,
+          "p95_latency_seconds": 9.913
+        },
+        "hard": {
+          "total": 22,
+          "heuristic_correct_count": 1,
+          "heuristic_accuracy": 0.0455,
+          "exact_match_rate": 0.0,
+          "source_hit_count": 15,
+          "source_recall_at_k": 0.6818,
+          "mean_reciprocal_rank": 0.353,
+          "no_answer_count": 0,
+          "no_answer_rate": 0.0,
+          "citation_rate": 1.0,
+          "valid_citation_rate": 1.0,
+          "mean_token_f1": 0.1012,
+          "mean_latency_seconds": 8.9654,
+          "p95_latency_seconds": 9.9754
+        },
+        "medium": {
+          "total": 42,
+          "heuristic_correct_count": 7,
+          "heuristic_accuracy": 0.1667,
+          "exact_match_rate": 0.0,
+          "source_hit_count": 31,
+          "source_recall_at_k": 0.7381,
+          "mean_reciprocal_rank": 0.4667,
+          "no_answer_count": 2,
+          "no_answer_rate": 0.0476,
+          "citation_rate": 0.9524,
+          "valid_citation_rate": 0.9524,
+          "mean_token_f1": 0.0891,
+          "mean_latency_seconds": 9.5698,
+          "p95_latency_seconds": 10.1318
+        }
+      },
+      "by_question_type": {
+        "factoid": {
+          "total": 91,
+          "heuristic_correct_count": 18,
+          "heuristic_accuracy": 0.1978,
+          "exact_match_rate": 0.0,
+          "source_hit_count": 65,
+          "source_recall_at_k": 0.7143,
+          "mean_reciprocal_rank": 0.5027,
+          "no_answer_count": 2,
+          "no_answer_rate": 0.022,
+          "citation_rate": 0.978,
+          "valid_citation_rate": 0.978,
+          "mean_token_f1": 0.0693,
+          "mean_latency_seconds": 9.3093,
+          "p95_latency_seconds": 10.006
+        },
+        "reasoning": {
+          "total": 9,
+          "heuristic_correct_count": 0,
+          "heuristic_accuracy": 0.0,
+          "exact_match_rate": 0.0,
+          "source_hit_count": 8,
+          "source_recall_at_k": 0.8889,
+          "mean_reciprocal_rank": 0.387,
+          "no_answer_count": 0,
+          "no_answer_rate": 0.0,
+          "citation_rate": 1.0,
+          "valid_citation_rate": 1.0,
+          "mean_token_f1": 0.1317,
+          "mean_latency_seconds": 9.1086,
+          "p95_latency_seconds": 9.9132
+        }
+      }
+    }
+  },
+  "automatic_winner": "best",
+  "run_configuration": {
+    "base_url": "http://127.0.0.1:8000",
+    "benchmark": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\rag_eval_100.json",
+    "modes": [
+      "best",
+      "hybrid"
+    ],
+    "top_k": 5,
+    "question_count": 100,
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "completed_rows": 200,
+    "request_failures": []
+  }
+}

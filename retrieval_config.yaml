@@ -1,0 +1,129 @@
+project:
+  name: University_RAG
+  seed: 42
+  language: fa
+
+paths:
+  chunks: data/processed/chunks.parquet
+  documents: data/processed/documents.parquet
+  metadata: data/processed/metadata.json
+  quality_report: data/processed/quality_report.json
+  summary: data/processed/summary.json
+  retrieval_root: data/retrieval
+  evaluation: data/retrieval/evaluation
+  embeddings: data/retrieval/embeddings
+  indexes: data/retrieval/indexes
+  chroma: data/retrieval/chroma
+  results: data/retrieval/results
+  reports: data/retrieval/reports
+  figures: data/retrieval/reports/figures
+  logs: data/retrieval/logs
+
+input:
+  include_needs_review: true
+  drop_invalid_documents: true
+  minimum_chunk_tokens: 1
+
+query:
+  normalize_persian: true
+  normalize_digits: true
+  remove_diacritics: true
+  remove_extra_spaces: true
+  use_stopwords_for_bm25: true
+
+bm25:
+  enabled: true
+  k1: 1.5
+  b: 0.75
+
+embedding_models:
+  - name: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+    alias: multilingual_minilm
+    enabled: true
+    query_prefix: ""
+    passage_prefix: ""
+    trust_remote_code: false
+    batch_size: 32
+    max_seq_length: 512
+
+  - name: intfloat/multilingual-e5-base
+    alias: multilingual_e5_base
+    enabled: true
+    query_prefix: "query: "
+    passage_prefix: "passage: "
+    trust_remote_code: false
+    batch_size: 16
+    max_seq_length: 512
+
+  - name: BAAI/bge-m3
+    alias: bge_m3
+    enabled: false
+    query_prefix: ""
+    passage_prefix: ""
+    trust_remote_code: true
+    batch_size: 8
+    max_seq_length: 1024
+
+  - name: jinaai/jina-embeddings-v3
+    alias: jina_v3
+    enabled: false
+    query_prefix: ""
+    passage_prefix: ""
+    trust_remote_code: true
+    batch_size: 8
+    max_seq_length: 1024
+
+dense:
+  default_model_alias: multilingual_e5_base
+  normalize_embeddings: true
+  faiss_index_type: flat_ip
+  rebuild_embeddings: false
+  rebuild_indexes: false
+
+chroma:
+  enabled: true
+  rebuild_collection: false
+  collection_prefix: university_rag
+  batch_size: 128
+
+retrieval:
+  candidate_k: 30
+  final_k: 5
+  evaluation_k_values: [1, 3, 5, 10, 20]
+  rrf_k: 60
+  bm25_weight: 1.0
+  dense_weight: 1.0
+  maximum_chunks_per_document: 3
+  deduplicate: true
+  deduplication_threshold: 0.92
+  use_mmr: true
+  mmr_lambda: 0.75
+  expand_neighbors: false
+  neighbor_window: 1
+
+reranker:
+  enabled: true
+  model_name: cross-encoder/mmarco-mMiniLMv2-L12-H384-v1
+  candidate_k: 20
+  final_k: 5
+  batch_size: 16
+  max_length: 512
+
+evaluation:
+  prefer_gold_file: true
+  gold_filename: retrieval_questions_gold.csv
+  silver_filename: retrieval_questions_silver.csv
+  silver_queries_per_document: 3
+  silver_max_queries: 60
+  include_unanswerable_queries: true
+  unanswerable_query_count: 5
+  random_seed: 42
+
+robustness:
+  enabled: true
+  variants_per_query: 4
+
+advanced:
+  query_expansion_enabled: true
+  parent_child_enabled: true
+  score_threshold_calibration: true

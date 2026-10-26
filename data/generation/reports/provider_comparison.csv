@@ -1,0 +1,2 @@
+﻿provider_alias,provider_name,model,experiments,queries,result_rows,generation_success_rate,nonempty_answer_rate,provider_errors,no_answer_accuracy,citation_coverage,valid_citation_ratio,lexical_support,answer_relevance,latency_seconds,estimated_cost_usd
+mock_extractive,mock,extractive-baseline-v1,6,37,222,1.0,1.0,0,0.8378378378378378,0.6959459459459459,1.0,0.7100592104812775,0.4892248892608811,0.3612837837837838,0.0

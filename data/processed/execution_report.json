@@ -1,0 +1,132 @@
+{
+  "run_id": "20260714_232636",
+  "run_started_utc": "2026-07-14T19:56:31.133477+00:00",
+  "python_version": "3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]",
+  "python_executable": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "machine": "AMD64",
+  "project_root": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG",
+  "config_path": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\config.yaml",
+  "seed": 42,
+  "package_versions": {
+    "PyMuPDF": "1.28.0",
+    "pandas": "3.0.3",
+    "numpy": "1.26.4",
+    "matplotlib": "3.11.0",
+    "hazm": "0.9.3",
+    "tqdm": "4.68.4",
+    "pytesseract": "0.3.13",
+    "Pillow": "12.3.0",
+    "opencv-python": "4.11.0.86",
+    "PyYAML": "6.0.3",
+    "pyarrow": "25.0.0"
+  },
+  "tesseract_available": true,
+  "tesseract_version": "5.4.0.20240606",
+  "tesseract_languages": [
+    "eng",
+    "fas",
+    "osd"
+  ],
+  "ocr_available": true,
+  "run_finished_utc": "2026-07-14T20:26:47.457268+00:00",
+  "total_runtime_seconds": 1816.327,
+  "stage_timings_seconds": {
+    "document_discovery": 2.103,
+    "pdf_and_page_analysis": 3.059,
+    "text_extraction_and_ocr": 1080.064,
+    "persian_cleaning_and_normalization": 1.002,
+    "document_metadata_extraction": 0.095,
+    "structure_detection": 0.23,
+    "structure_aware_chunking": 0.356,
+    "primary_export": 0.254
+  },
+  "config": {
+    "project": {
+      "name": "University_RAG",
+      "seed": 42,
+      "language": "fa"
+    },
+    "paths": {
+      "raw_data": "data/raw",
+      "processed_data": "data/processed",
+      "reports": "reports/data_preparation",
+      "figures": "reports/data_preparation/figures",
+      "logs": "logs"
+    },
+    "categories": [
+      "exams",
+      "master_phd",
+      "phd",
+      "regulations",
+      "transfer",
+      "tuition",
+      "undergraduate"
+    ],
+    "pdf_analysis": {
+      "min_direct_chars": 80,
+      "min_direct_tokens": 15,
+      "min_persian_ratio": 0.15,
+      "suspicious_noise_ratio": 0.12
+    },
+    "ocr": {
+      "enabled": true,
+      "language": "fas+eng",
+      "dpi": 300,
+      "psm": 6,
+      "oem": 3,
+      "minimum_confidence": 20,
+      "preprocess": true,
+      "deskew": true,
+      "tesseract_cmd": "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
+    },
+    "cleaning": {
+      "header_footer_candidate_lines": 3,
+      "header_footer_min_pages": 3,
+      "header_footer_repeat_ratio": 0.35
+    },
+    "quality": {
+      "minimum_page_tokens": 20,
+      "ready_score": 60,
+      "invalid_score": 25,
+      "maximum_noise_ratio": 0.18,
+      "maximum_replacement_ratio": 0.01
+    },
+    "chunking": {
+      "min_tokens": 300,
+      "target_tokens": 400,
+      "max_tokens": 500,
+      "overlap_tokens": 80,
+      "merge_small_non_structural_units": true
+    }
+  },
+  "input": {
+    "raw_directory": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\raw",
+    "categories": [
+      "exams",
+      "master_phd",
+      "phd",
+      "regulations",
+      "transfer",
+      "tuition",
+      "undergraduate"
+    ],
+    "pdf_files_discovered": 18,
+    "unique_pdf_files": 15
+  },
+  "output_paths": {
+    "document_catalog_csv": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\processed\\document_catalog.csv",
+    "documents_parquet": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\processed\\documents.parquet",
+    "pages_parquet": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\processed\\pages.parquet",
+    "chunks_parquet": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\processed\\chunks.parquet",
+    "metadata_json": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\processed\\metadata.json",
+    "quality_report_json": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\processed\\quality_report.json",
+    "execution_report_json": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\processed\\execution_report.json",
+    "summary_json": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\processed\\summary.json",
+    "final_document_status_csv": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\processed\\final_document_status.csv"
+  },
+  "log_path": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\logs\\data_preparation_20260714_232636.log",
+  "figures_directory": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\reports\\data_preparation\\figures",
+  "errors": [],
+  "warnings": []
+}

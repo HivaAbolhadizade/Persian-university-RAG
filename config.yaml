@@ -1,0 +1,56 @@
+project:
+  name: University_RAG
+  seed: 42
+  language: fa
+
+paths:
+  raw_data: data/raw
+  processed_data: data/processed
+  reports: reports/data_preparation
+  figures: reports/data_preparation/figures
+  logs: logs
+
+categories:
+  - exams
+  - master_phd
+  - phd
+  - regulations
+  - transfer
+  - tuition
+  - undergraduate
+
+pdf_analysis:
+  min_direct_chars: 80
+  min_direct_tokens: 15
+  min_persian_ratio: 0.15
+  suspicious_noise_ratio: 0.12
+
+ocr:
+  enabled: true
+  language: fas+eng
+  dpi: 300
+  psm: 6
+  oem: 3
+  minimum_confidence: 20
+  preprocess: true
+  deskew: true
+  tesseract_cmd: ""
+
+cleaning:
+  header_footer_candidate_lines: 3
+  header_footer_min_pages: 3
+  header_footer_repeat_ratio: 0.35
+
+quality:
+  minimum_page_tokens: 20
+  ready_score: 60
+  invalid_score: 25
+  maximum_noise_ratio: 0.18
+  maximum_replacement_ratio: 0.01
+
+chunking:
+  min_tokens: 300
+  target_tokens: 400
+  max_tokens: 500
+  overlap_tokens: 80
+  merge_small_non_structural_units: true

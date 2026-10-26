@@ -1,0 +1,49 @@
+{
+  "run_id": "20260715_015615",
+  "status": "completed",
+  "benchmark_type": "silver_auto",
+  "benchmark_queries": 37,
+  "chunks_indexed": 316,
+  "documents_indexed": 15,
+  "embedding_models_ready": [
+    "multilingual_e5_base",
+    "multilingual_minilm"
+  ],
+  "faiss_indexes_ready": [
+    "multilingual_e5_base",
+    "multilingual_minilm"
+  ],
+  "chroma_collections_ready": [
+    "multilingual_e5_base",
+    "multilingual_minilm"
+  ],
+  "reranker_status": "ready",
+  "best_retriever": {
+    "benchmark_type": "silver_auto",
+    "selection_status": "provisional_silver",
+    "final_scientific_selection": false,
+    "benchmark_label": "bm25",
+    "method": "bm25",
+    "dense_alias": "multilingual_e5_base",
+    "embedding_model_name": null,
+    "reranker_enabled": false,
+    "reranker_model_name": null,
+    "final_k": 5,
+    "candidate_k": 30,
+    "rrf_k": 60,
+    "bm25_weight": 1.0,
+    "dense_weight": 1.0,
+    "deduplicate": true,
+    "use_mmr": true,
+    "mmr_lambda": 0.75
+  },
+  "failed_answerable_queries_at_5": 1,
+  "errors_count": 0,
+  "warnings_count": 0,
+  "total_runtime_seconds": 342.805,
+  "notebook03_input": {
+    "chunks": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\processed\\chunks.parquet",
+    "index_manifest": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\retrieval\\indexes\\index_manifest.json",
+    "best_retriever_config": "D:\\UNI\\TERM10\\1. NLP\\PROJECT\\University_RAG\\data\\retrieval\\reports\\best_retriever_config.yaml"
+  }
+}
