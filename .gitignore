@@ -46,3 +46,6 @@ reports/rag_evaluation_gemini_final/raw_results.jsonl
 Thumbs.db
 .vscode/
 .idea/
+
+# Local experiment reports and evaluation outputs
+/reports/
