@@ -194,28 +194,6 @@ University_RAG/
 - Retrieval implementation: `backend/app/services/retriever.py`
 - Evaluator: `evaluation/evaluate_rag.py`
 
-## What is and is not included in this repository
-
-**This is the complete-results portfolio edition**, replacing an earlier source-only release that mistakenly stripped notebook outputs and intermediate data. It preserves the original run evidence and makes the data-processing and retrieval workflow much easier to inspect.
-
-**Included (historical experimental snapshot, July 2026):**
-
-- All **three notebooks with their saved output cells, execution counts and embedded visualizations**. In particular Notebook 01 retains 49 output records, Notebook 02 retains 88, and Notebook 03 retains 60.
-- The **10 original files in `data/processed/`**, including `pages.parquet`, `documents.parquet`, `chunks.parquet`, `metadata.json`, the document catalogs, and quality/status reports.
-- The **retrieval datasets, figures, metrics, embeddings, serialized indexes and Chroma snapshot** under `data/retrieval/`. These were generated together for the same archived document/chunk ordering; do not mix them with new data.
-- Selected generation evaluation files and figures in `data/generation/`, Notebook 01 figures in `reports/data_preparation/`, and selected written evaluation reports.
-- The service, frontend, tests, configurations, and 100-question Persian evaluation set.
-
-**Not included:**
-
-- **Original source PDFs** in `data/raw/` (redistribution permission has not been verified). The processed datasets include **text extracted from these documents**, however: *before public publication, the repository owner should check the regulations' source licenses, permitted reuse and any personal information*. Extraction does **not** automatically grant redistribution rights.
-- Live API keys, local `.env`, generated LLM response caches, logs, locally saved settings, and full raw generation/API response dumps.
-- The course-submission PDF report and university logo; the project is not affiliated with the university as a deployed service.
-
-**Reproducibility notes:** You can **inspect the original executed notebooks, processed text and saved indexes without rerunning OCR or embedding generation**. The saved notebooks contain paths and other run-specific output from the author's Windows workstation. They document a *previous execution*, not a guarantee that every cell will rerun unchanged on your machine. First-time backend use still requires installing dependencies and configuring a provider. If a serialized index is incompatible with your installed library versions, rebuild Notebook 02 against the **same committed `chunks.parquet`** (no PDFs required to start from the processed stage). To rerun **Notebook 01 from the original raw inputs**, you must separately obtain the legally reusable PDFs.
-
-For details see [docs/SECURITY_AND_DATA.md](docs/SECURITY_AND_DATA.md).
-
 ## Prerequisites
 
 - **Python:** preferably 3.11 or 3.12 (recommended, not a cross-platform compatibility guarantee).
