@@ -163,7 +163,6 @@ University_RAG/
 ├── evaluation/
 │   ├── evaluate_rag.py             # API-based evaluator
 │   └── rag_eval_100.json           # Course benchmark (100 questions)
-├── results/                         # Selected recorded evaluation summaries
 ├── docs/
 │   ├── EVALUATION.md               # Experimental results and caveats
 │   ├── SECURITY_AND_DATA.md        # Data, privacy and key-handling guidance
