@@ -7,7 +7,6 @@
 **Project type:** Academic NLP / information retrieval / LLM application and evaluation  
 **Interface language:** Persian (right-to-left); documentation: English
 
-> **Portfolio / research prototype — not an official university service.** The application is intended to answer questions *from a user-provided collection of regulations* and surface the retrieved source passages. It should not be used as an authoritative source for current academic policies. Always check the original, up-to-date documents.
 
 ## Contents
 
