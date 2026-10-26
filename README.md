@@ -2,10 +2,8 @@
 
 **An end-to-end, citation-aware Retrieval-Augmented Generation (RAG) system for Persian university regulations.**
 
-**Academic context:** Final project for the **Natural Language Processing (NLP)** course, **Spring 2026**, **Shahid Bahonar University of Kerman (UoK), Iran**.  
-**Project author:** **Hiva Abolhadizadeh**  
+**Academic context:** Final project for the **Natural Language Processing (NLP)** course, **Spring 2026**, **Shahid Bahonar University of Kerman (UoK), Iran**.   
 **Project type:** Academic NLP / information retrieval / LLM application and evaluation  
-**Interface language:** Persian (right-to-left); documentation: English
 
 
 ## Contents
